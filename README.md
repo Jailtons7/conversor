@@ -15,7 +15,7 @@ Moedas Testadas e Suportadas:
 5. ETHEREUM (ETH)
 
 OBS.: A API de moedas Awesome API quebra para conversões
-de BTC para BRL e, portanto, há esse bug por enquanto.
+de BRL, EUR ou USD para BTC ou ETH e, portanto, há esse bug por enquanto.
 
 ## Usando a API
 
@@ -55,3 +55,8 @@ Para a requisição anterior a resposta foi
 ```
 
 O que indica que naquele momento, 25.50 reais era equivalente a 4.19 euros.
+
+## Contribuições
+
+Se você encontrar qualquer erro/comportamento inesperado na api, pode contribuir abrindo 
+uma issue relatando detalhadamente como reproduzir.
