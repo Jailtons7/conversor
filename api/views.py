@@ -2,7 +2,7 @@ from rest_framework import views
 from rest_framework.response import Response
 from rest_framework import status
 
-from integrations.awesomeapi import AwesomeApi
+from .integrations.awesomeapi import AwesomeApi
 
 
 class ConvertView(views.APIView):
@@ -13,7 +13,7 @@ class ConvertView(views.APIView):
         params_data = (
             request.GET.get('from'),
             request.GET.get('to'),
-            request.GET.get('amount'),
+            float(request.GET.get('amount')),
         )
 
         if not any(params_data):
