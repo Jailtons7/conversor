@@ -23,6 +23,15 @@ class ApiTests(APITestCase):
         ('BRL', 'EUR'),
         ('USD', 'EUR'),
         ('EUR', 'USD'),
+        #
+        # TODO: Para os pares seguintes a api de moedas do Awesome quebra
+        #
+        # ('BRL', 'BTC'),
+        # ('BRL', 'ETH'),
+        # ('EUR', 'BTC'),
+        # ('USD', 'BTC'),
+        # ('USD', 'ETH'),
+        # ('EUR', 'ETH'),
     )
 
     def test_integration(self):
