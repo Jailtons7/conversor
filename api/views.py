@@ -11,12 +11,12 @@ class ConvertView(views.APIView):
         method GET
         """
         params_data = (
-            request.GET.get('from'),
-            request.GET.get('to'),
-            float(request.GET.get('amount')),
+            request.GET.get('from', ''),
+            request.GET.get('to', ''),
+            float(request.GET.get('amount', 0.0)),
         )
 
-        if not any(params_data):
+        if not all(params_data):
             return Response(
                 data={'erro': 'Verifique se os parâmetros foram passados na URL'},
                 status=status.HTTP_400_BAD_REQUEST
