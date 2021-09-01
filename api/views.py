@@ -23,4 +23,12 @@ class ConvertView(views.APIView):
             )
         awesome = AwesomeApi(from_currency=params_data[0], to_currency=params_data[1])
         converted = awesome.converts(params_data[2])
-        return Response(data={'converte': converted}, status=status.HTTP_200_OK)
+        return Response(
+            data={
+                'amount': params_data[2],
+                'from': params_data[0],
+                'to': params_data[1],
+                'converted': converted,
+            },
+            status=status.HTTP_200_OK
+        )
